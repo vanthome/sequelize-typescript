@@ -109,7 +109,7 @@
     "@types/sinon": "10.0.11",
     "@types/sinon-chai": "3.2.8",
     "@typescript-eslint/eslint-plugin": "5.28.0",
-    "@typescript-eslint/parser": "5.11.0",
+    "@typescript-eslint/parser": "5.28.0",
     "chai": "4.3.6",
     "chai-as-promised": "7.1.1",
     "chai-datetime": "1.8.0",
@@ -136,7 +136,7 @@
     "sinon-chai": "3.7.0",
     "source-map-support": "0.5.21",
     "sqlite3": "5.0.8",
-    "ts-node": "10.7.0",
+    "ts-node": "10.8.1",
     "typescript": "4.6.3",
     "uuid-validate": "0.0.3"
   },
