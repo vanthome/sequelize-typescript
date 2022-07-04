@@ -50,12 +50,6 @@ export function BelongsToMany<
 
     if (!options.as) options.as = propertyName;
 
-    addAssociation(
-      target,
-      new BelongsToManyAssociation(
-        associatedClassGetter,
-        options as BelongsToManyOptions<TCreationAttributesThrough, TModelAttributesThrough>
-      )
-    );
+    addAssociation(target, new BelongsToManyAssociation(associatedClassGetter, options as any));
   };
 }

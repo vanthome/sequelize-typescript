@@ -12,7 +12,6 @@ import { getIndexes } from '../../model/index/index-service';
 import { Repository } from '../..';
 
 export class Sequelize extends OriginSequelize {
-  options: SequelizeOptions;
   repositoryMode: boolean;
 
   constructor(database: string, username: string, password?: string, options?: SequelizeOptions);
@@ -47,7 +46,7 @@ export class Sequelize extends OriginSequelize {
   addModels(arg: (ModelCtor | string)[]): void;
   addModels(arg: (ModelCtor | string)[], modelMatch?: ModelMatch): void {
     const defaultModelMatch = (filename, member) => filename === member;
-    const models = getModels(arg, modelMatch || this.options.modelMatch || defaultModelMatch);
+    const models = getModels(arg, modelMatch || defaultModelMatch);
 
     const definedModels = this.defineModels(models);
     this.associateModels(definedModels);

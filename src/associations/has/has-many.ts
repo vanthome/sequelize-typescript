@@ -12,15 +12,16 @@ export function HasMany<TCreationAttributes, TModelAttributes>(
 
 export function HasMany<TCreationAttributes, TModelAttributes>(
   associatedClassGetter: ModelClassGetter<TCreationAttributes, TModelAttributes>,
-  options?: HasManyOptions
+  options?: HasManyOptions<string, string>
 ): Function;
 
 export function HasMany<TCreationAttributes, TModelAttributes>(
   associatedClassGetter: ModelClassGetter<TCreationAttributes, TModelAttributes>,
-  optionsOrForeignKey?: string | HasManyOptions
+  optionsOrForeignKey?: string | HasManyOptions<string, string>
 ): Function {
   return (target: any, propertyName: string) => {
-    const options: HasManyOptions = getPreparedAssociationOptions(optionsOrForeignKey);
+    const options: HasManyOptions<string, string> =
+      getPreparedAssociationOptions(optionsOrForeignKey);
     if (!options.as) options.as = propertyName;
     addAssociation(target, new HasAssociation(associatedClassGetter, options, Association.HasMany));
   };

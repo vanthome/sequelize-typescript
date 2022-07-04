@@ -7,6 +7,6 @@ export type BelongsToManyOptions<TCreationAttributesThrough, TModelAttributesThr
     ?
         | ModelClassGetter<TCreationAttributesThrough, TModelAttributesThrough>
         | string
-        | ThroughOptions<TCreationAttributesThrough, TModelAttributesThrough>
+        | ThroughOptions
     : OriginBelongsToManyOptions[K];
 };

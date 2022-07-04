@@ -14,9 +14,9 @@ export function getForeignKeyOptions<
 >(
   relatedClass: ModelType<TCreationAttributes, TModelAttributes>,
   classWithForeignKey?: ModelType<TCreationAttributesThrough, TModelAttributesThrough>,
-  foreignKey?: string | ForeignKeyOptions
-): ForeignKeyOptions {
-  let foreignKeyOptions: ForeignKeyOptions = {};
+  foreignKey?: string | ForeignKeyOptions<string>
+): ForeignKeyOptions<string> {
+  let foreignKeyOptions: ForeignKeyOptions<string> = {};
 
   if (typeof foreignKey === 'string') {
     foreignKeyOptions.name = foreignKey;

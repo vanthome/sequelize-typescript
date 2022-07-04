@@ -1,7 +1,7 @@
-import { BelongsToOptions, HasManyOptions, HasOneOptions, ManyToManyOptions } from 'sequelize';
+import { BelongsToOptions, HasManyOptions, HasOneOptions, BelongsToManyOptions } from 'sequelize';
 
 export type UnionAssociationOptions =
-  | BelongsToOptions
-  | HasManyOptions
-  | HasOneOptions
-  | ManyToManyOptions;
+  | BelongsToOptions<string, string>
+  | HasManyOptions<string, string>
+  | HasOneOptions<string, string>
+  | BelongsToManyOptions<any, any, any>;

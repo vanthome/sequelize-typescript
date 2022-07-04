@@ -13,7 +13,7 @@ export class HasAssociation<TCreationAttributes, TModelAttributes> extends BaseA
 > {
   constructor(
     associatedClassGetter: ModelClassGetter<TCreationAttributes, TModelAttributes>,
-    protected options: HasManyOptions | HasOneOptions,
+    protected options: HasManyOptions<string, string> | HasOneOptions<string, string>,
     private association: Association
   ) {
     super(associatedClassGetter, options);

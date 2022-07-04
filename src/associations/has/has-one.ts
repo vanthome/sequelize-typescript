@@ -12,15 +12,16 @@ export function HasOne<TCreationAttributes, TModelAttributes>(
 
 export function HasOne<TCreationAttributes, TModelAttributes>(
   associatedClassGetter: ModelClassGetter<TCreationAttributes, TModelAttributes>,
-  options?: HasOneOptions
+  options?: HasOneOptions<string, string>
 ): Function;
 
 export function HasOne<TCreationAttributes, TModelAttributes>(
   associatedClassGetter: ModelClassGetter<TCreationAttributes, TModelAttributes>,
-  optionsOrForeignKey?: string | HasOneOptions
+  optionsOrForeignKey?: string | HasOneOptions<string, string>
 ): Function {
   return (target: any, propertyName: string) => {
-    const options: HasOneOptions = getPreparedAssociationOptions(optionsOrForeignKey);
+    const options: HasOneOptions<string, string> =
+      getPreparedAssociationOptions(optionsOrForeignKey);
     if (!options.as) options.as = propertyName;
     addAssociation(target, new HasAssociation(associatedClassGetter, options, Association.HasOne));
   };

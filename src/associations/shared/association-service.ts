@@ -1,14 +1,13 @@
 import 'reflect-metadata';
-import { BelongsToOptions, HasOneOptions, HasManyOptions, ManyToManyOptions } from 'sequelize';
+import { BelongsToOptions, HasOneOptions, HasManyOptions } from 'sequelize';
 import { BaseAssociation } from './base-association';
 
 const ASSOCIATIONS_KEY = 'sequelize:associations';
 
 export type NonBelongsToManyAssociationOptions =
-  | BelongsToOptions
-  | HasManyOptions
-  | HasOneOptions
-  | ManyToManyOptions;
+  | BelongsToOptions<string, string>
+  | HasManyOptions<string, string>
+  | HasOneOptions<string, string>;
 
 export function getPreparedAssociationOptions(
   optionsOrForeignKey?: string | NonBelongsToManyAssociationOptions

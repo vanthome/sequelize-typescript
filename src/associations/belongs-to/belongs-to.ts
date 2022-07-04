@@ -11,15 +11,16 @@ export function BelongsTo<TCreationAttributes, TModelAttributes>(
 
 export function BelongsTo<TCreationAttributes, TModelAttributes>(
   associatedClassGetter: ModelClassGetter<TCreationAttributes, TModelAttributes>,
-  options?: BelongsToOptions
+  options?: BelongsToOptions<string, string>
 ): Function;
 
 export function BelongsTo<TCreationAttributes, TModelAttributes>(
   associatedClassGetter: ModelClassGetter<TCreationAttributes, TModelAttributes>,
-  optionsOrForeignKey?: string | BelongsToOptions
+  optionsOrForeignKey?: string | BelongsToOptions<string, string>
 ): Function {
   return (target: any, propertyName: string) => {
-    const options: BelongsToOptions = getPreparedAssociationOptions(optionsOrForeignKey);
+    const options: BelongsToOptions<string, string> =
+      getPreparedAssociationOptions(optionsOrForeignKey);
     if (!options.as) options.as = propertyName;
     addAssociation(target, new BelongsToAssociation(associatedClassGetter, options));
   };

@@ -13,7 +13,7 @@ export class BelongsToAssociation<TCreationAttributes, TModelAttributes> extends
 > {
   constructor(
     associatedClassGetter: ModelClassGetter<TCreationAttributes, TModelAttributes>,
-    protected options: BelongsToOptions
+    protected options: BelongsToOptions<string, string>
   ) {
     super(associatedClassGetter, options);
   }
