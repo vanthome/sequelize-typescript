@@ -10,7 +10,7 @@
     "lint:fix": "npm run lint -- --fix",
     "markdownlint": "markdownlint '**/*.md' --ignore node_modules",
     "release": "release-it",
-    "postinstall": "husky install",
+    "postinstall": "",
     "prepublishOnly": "pinst --disable && npm run build",
     "postpublish": "pinst --enable"
   },
