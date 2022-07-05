@@ -10,7 +10,7 @@
     "lint:fix": "npm run lint -- --fix",
     "markdownlint": "markdownlint '**/*.md' --ignore node_modules",
     "release": "release-it",
-    "postinstall": "",
+    "postinstall": "npm run build",
     "prepublishOnly": "pinst --disable && npm run build",
     "postpublish": "pinst --enable"
   },
@@ -131,7 +131,7 @@
     "prettyjson": "1.2.5",
     "reflect-metadata": "0.1.13",
     "release-it": "14.12.4",
-    "sequelize": "6.20.1",
+    "sequelize": "https://github.com/vanthome/sequelize.git#b44d72250a388e5e92e4e111965d2f826723ae1a",
     "sinon": "13.0.1",
     "sinon-chai": "3.7.0",
     "source-map-support": "0.5.21",
