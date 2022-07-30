@@ -131,7 +131,7 @@
     "prettyjson": "1.2.5",
     "reflect-metadata": "0.1.13",
     "sequelize": "https://github.com/vanthome/sequelize.git#b44d72250a388e5e92e4e111965d2f826723ae1a",
-    "release-it": "14.14.3",
+    "release-it": "15.1.3",
     "sinon": "13.0.1",
     "sinon-chai": "3.7.0",
     "source-map-support": "0.5.21",
