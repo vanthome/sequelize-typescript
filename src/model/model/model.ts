@@ -183,6 +183,7 @@ function isForbiddenMember(propertyKey: string): boolean {
     'replaceHookAliases',
     'refreshAttributes',
     'inspect',
+    '_indexes',
   ];
   return FORBIDDEN_KEYS.indexOf(propertyKey) !== -1;
 }
