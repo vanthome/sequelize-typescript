@@ -1,0 +1,1 @@
+{"version":3,"file":"is-array.js","sourceRoot":"","sources":["../../src/validation/is-array.ts"],"names":[],"mappings":";;;AAAA,yEAAwE;AAExE;;GAEG;AACH,SAAgB,OAAO,CAAC,MAAW,EAAE,YAAoB;IACvD,IAAA,uCAAmB,EAAC,MAAM,EAAE,YAAY,EAAE;QACxC,QAAQ,EAAE;YACR,OAAO,EAAE,IAAI;SACd;KACF,CAAC,CAAC;AACL,CAAC;AAND,0BAMC"}

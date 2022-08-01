@@ -1,0 +1,1 @@
+{"version":3,"file":"is-ip.js","sourceRoot":"","sources":["../../src/validation/is-ip.ts"],"names":[],"mappings":";;;AAAA,yEAAwE;AAExE;;GAEG;AACH,SAAgB,IAAI,CAAC,MAAW,EAAE,YAAoB;IACpD,IAAA,uCAAmB,EAAC,MAAM,EAAE,YAAY,EAAE;QACxC,QAAQ,EAAE;YACR,IAAI,EAAE,IAAI;SACX;KACF,CAAC,CAAC;AACL,CAAC;AAND,oBAMC"}

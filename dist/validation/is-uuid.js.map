@@ -1,0 +1,1 @@
+{"version":3,"file":"is-uuid.js","sourceRoot":"","sources":["../../src/validation/is-uuid.ts"],"names":[],"mappings":";;;AAAA,yEAAwE;AAExE;;;;GAIG;AACH,SAAgB,MAAM,CAAC,OAA4C;IACjE,OAAO,CAAC,MAAW,EAAE,YAAoB,EAAE,EAAE,CAC3C,IAAA,uCAAmB,EAAC,MAAM,EAAE,YAAY,EAAE;QACxC,QAAQ,EAAE;YACR,MAAM,EAAE,OAAc;SACvB;KACF,CAAC,CAAC;AACP,CAAC;AAPD,wBAOC"}
