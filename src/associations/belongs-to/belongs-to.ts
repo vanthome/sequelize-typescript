@@ -25,16 +25,7 @@ export function BelongsTo<TCreationAttributes, TModelAttributes>(
   return (target: any, propertyName: string) => {
     const optionsOrig: NonBelongsToManyAssociationOptions =
       getPreparedAssociationOptions(optionsOrForeignKey);
-
-    if (!optionsOrig.inverse) {
-      optionsOrig.inverse = {};
-    }
-    if (optionsOrig.inverse.as === undefined) {
-      optionsOrig.inverse.as = 'hasOne';
-    }
-    const optionsAny: any = optionsOrig;
-
-    const options: BelongsToOptions<string, string> = optionsAny;
+    const options: BelongsToOptions<string, string> = optionsOrig as BelongsToOptions<string, string>;
     if (!options.as) options.as = propertyName;
     addAssociation(target, new BelongsToAssociation(associatedClassGetter, options));
   };
