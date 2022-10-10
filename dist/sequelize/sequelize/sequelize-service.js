@@ -35,6 +35,7 @@ function getModels(arg, modelMatch) {
         return arg.reduce((models, dir) => {
             if (!glob.hasMagic(dir) && !hasSupportedExtension(dir))
                 dir = (0, path_1.join)(dir, '/*');
+            dir = dir.replaceAll('\\', '/');
             const _models = glob
                 .sync(dir)
                 .filter(isImportable)
