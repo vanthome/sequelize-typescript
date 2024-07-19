@@ -129,7 +129,7 @@
     "prettier": "2.7.1",
     "prettyjson": "1.2.5",
     "reflect-metadata": "0.1.13",
-    "sequelize": "https://github.com/vanthome/sequelize.git#991284577afdcc33f6fdbbca387d2fbd3ce0e158",
+    "sequelize": "https://github.com/vanthome/sequelize.git#35f64a7a8911e1289274deba33c0340f5366ba2e",
     "release-it": "15.1.3",
     "sinon": "13.0.1",
     "sinon-chai": "3.7.0",
